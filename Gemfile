@@ -29,7 +29,7 @@ group :test do
   gem 'factory_girl_rails'
   gem "shoulda-matchers"
 end
-
+gem 'pry'
 gem 'jquery-rails'
 gem 'devise'
 # To use ActiveModel has_secure_password
