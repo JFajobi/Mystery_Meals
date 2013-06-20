@@ -1,0 +1,6 @@
+<%= simple_form_for @meal_offer_search do |f| %>
+  <%= f.input :price_anchor, collection: %w{$5 $10 $15} %>
+  <%= f.input :neighborhood, collection: ['Back Bay', 'South End', 'North End'] %>
+  <%= f.input :cuisine, collection: ['Italian', 'BBQ', 'Japenese', 'American'] %>
+  <%= f.submit 'Submit' %>
+<% end %>
