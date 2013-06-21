@@ -1,4 +1,5 @@
 class Restaurant < ActiveRecord::Base
-  attr_accessible :address, :description, :image, :neighborhood
+  attr_accessible :address, :description, :restaurant_image, :neighborhood, :remote_restaurant_image_url
   validates_presence_of :address, :description, :neighborhood
+  mount_uploader :restaurant_image, RestaurantImageUploader
 end

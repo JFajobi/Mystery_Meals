@@ -1,0 +1,9 @@
+<%= simple_form_for @restaurant, :html => {:multipart => true} do |f| %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.file_field :image %> </br>
+  <%= f.label :remote_restaurant_image_url, 'Or insert image URL' %>
+  <%= f.text_field :remote_restaurant_image_url %>
+  <%= f.input :neighborhood, collection: MealOfferSearch::NEIGHBORHOOD  %>
+  <%= f.submit 'Submit' %>
+<%- end %>
