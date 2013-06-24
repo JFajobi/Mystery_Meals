@@ -1,5 +1,3 @@
-# PostgreSQL. Versions 8.2 and up are supported.
-#
 # Install the pg driver:
 #   gem install pg
 # On Mac OS X with macports:

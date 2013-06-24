@@ -1,0 +1,9 @@
+<%= simple_form_for @menu_item do |f| %>
+  <%= f.input :dish %>
+  <%= f.input :description %>
+  <%= f.input :cuisine, collection: ['Italian','USA','SPICY SHIT'] %>
+  <%= f.file_field :image %> </br>
+  <%= f.label :remote_menu_item_image_url, 'Or insert image URL' %>
+  <%= f.text_field :remote_menu_item_image_url %></br>
+  <%= f.submit 'Submit' %>
+<% end %>
