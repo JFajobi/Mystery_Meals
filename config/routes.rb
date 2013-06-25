@@ -1,8 +1,9 @@
 MnM::Application.routes.draw do
   devise_for :users
   resources :meal_offer_searches
-  resources :restaurants
-  resources :menu_items
+  resources :restaurants do
+    resources :menu_items
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

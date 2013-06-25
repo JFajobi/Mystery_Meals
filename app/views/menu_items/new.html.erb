@@ -1,4 +1,4 @@
-<%= simple_form_for @menu_item do |f| %>
+<%= simple_form_for [@restaurant, @menu_item] do |f| %>
   <%= f.input :dish %>
   <%= f.input :description %>
   <%= f.input :cuisine, collection: ['Italian','USA','SPICY SHIT'] %>
