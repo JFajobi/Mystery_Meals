@@ -35,6 +35,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'rails_admin'
+gem 'cancan'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

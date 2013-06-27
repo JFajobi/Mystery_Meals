@@ -12,6 +12,12 @@
     <% if current_user %>
       <h1><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></h1>
     <% end %>
+
+    <!-- CHECK OUT TO CHECK IF USER IS AN ADMIN -->
+
+    <% if current_user.try(:admin?) %>
+      <h1><%= link_to 'Backend', rails_admin_path %></h1>
+    <% end %>
     <h1><%= link_to 'Mystery Meals', '/' %></h1>
     <nav>
       <ul>
