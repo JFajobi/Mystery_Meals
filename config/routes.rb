@@ -1,5 +1,9 @@
 MnM::Application.routes.draw do
   devise_for :users
+  
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  
   resources :meal_offer_searches
   resources :restaurants do
     resources :menu_items
