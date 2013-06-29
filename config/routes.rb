@@ -5,6 +5,8 @@ MnM::Application.routes.draw do
 
   
   resources :meal_offer_searches
+  resources :restaurant_reveals
+  
   resources :restaurants do
     resources :menu_items
   end

@@ -9,9 +9,10 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :admin
   validates_presence_of :first_name, :last_name
   validates_uniqueness_of :email
+  has_many :meal_offer_searches
   # attr_accessible :title, :body
-
-  def admin?
-    admin
+  def which_type(user)
+    user.meal_offer_searches.last.cuisine
   end
+
 end
