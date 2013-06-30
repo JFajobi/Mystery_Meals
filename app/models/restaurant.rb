@@ -4,4 +4,7 @@ class Restaurant < ActiveRecord::Base
   mount_uploader :restaurant_image, RestaurantImageUploader
 
   has_many :menu_items
+
+  
+
 end

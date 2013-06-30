@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+# restaurant seed data 
 # neighborhood, name, price_anchor, address, description, cuisine
 
 
@@ -25,3 +27,7 @@ Jamaica Plain, MA 02130', "Don't head that-a-way, head to Galway",'Seafood']]
 restaurants.each  do |restaurant|
   Restaurant.create(:neighborhood => restaurant[0], :name => restaurant[1], :price_anchor => restaurant[2], :address => restaurant[3], :description => restaurant[4], :cuisine => restaurant[5])
 end
+
+
+# User/Admin seed data
+# email, first_name, last_name, admin

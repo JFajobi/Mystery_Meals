@@ -2,7 +2,7 @@ class MealOfferSearch < ActiveRecord::Base
   attr_accessible :cuisine, :neighborhood, :price_anchor, :user_id
   validates_presence_of :price_anchor, :user_id
  
-  CUISINE = ['Italian', 'BBQ', 'Japenese', 'Americannnn']
+  CUISINE = ['Italian', 'BBQ', 'Japenese', 'American', 'Seafood']
  
   NEIGHBORHOOD = ['Allston/Brighton', 'Back Bay/Bay State Road', 
                   'Beacon Hill/Bay Village', 'Charlestown', 'Chinatown', 
