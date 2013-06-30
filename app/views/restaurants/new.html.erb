@@ -1,5 +1,8 @@
 <%= simple_form_for @restaurant, :html => {:multipart => true} do |f| %>
   <%= f.input :address %>
+  <%= f.input :name %>
+  <%= f.input :price_anchor, collection: [10,15,20,30]  %>
+  <%= f.input :cuisine, collection: MealOfferSearch::CUISINE  %>
   <%= f.input :description %>
   <%= f.file_field :image %> </br>
   <%= f.label :remote_restaurant_image_url, 'Or insert image URL' %>

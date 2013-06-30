@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+neighborhood, name, price_anchor, address, description, cuisine
+restaurants = [['Jamaica Plain', 'Ten Tables', 30, '597 Centre St
+Jamaica Plain, MA 02130', ]]

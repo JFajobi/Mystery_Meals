@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627180243) do
+ActiveRecord::Schema.define(:version => 20130630140419) do
 
   create_table "meal_offer_searches", :force => true do |t|
     t.string   "neighborhood"
     t.integer  "price_anchor", :null => false
     t.string   "cuisine"
-    t.integer  "user_id"
+    t.integer  "user_id",      :null => false
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130627180243) do
     t.string   "remote_menu_item_image_url"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
-    t.integer  "restaurant_id"
+    t.integer  "restaurant_id",              :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(:version => 20130627180243) do
     t.text     "neighborhood",     :null => false
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "price_anchor",     :null => false
+    t.string   "name",             :null => false
+    t.string   "cuisine",          :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -6,7 +6,7 @@ module AuthenticationHelper
     click_on 'Sign in'
   end
 
-   def sign_up_as(user)
+  def sign_up_as(user)
     visit new_user_registration_path
     fill_in 'First name', with: user.first_name
     fill_in 'Last name', with: user.last_name 
@@ -16,5 +16,22 @@ module AuthenticationHelper
     click_button 'Sign up'
   end
 
-  
+  def create_restaurant(restaurant)
+    visit new_restaurant_path
+    fill_in 'Address', with: restaurant.address
+    fill_in 'Description', with: restaurant.description
+    select restaurant.neighborhood, from: 'Neighborhood'
+    select restaurant.price_anchor, from: 'Price anchor'
+    select restaurant.cuisine, from: 'Cuisine'
+    click_button 'Submit'
+  end
+
+  def search_for_food
+    visit new_meal_offer_search_path
+    select '15', from: 'Price anchor'
+    select 'Jamaica Plain', from:'Neighborhood'
+    select 'Italian', from: 'Cuisine'
+    click_button 'Submit'
+  end
+
 end
