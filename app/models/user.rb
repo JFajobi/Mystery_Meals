@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
   has_many :meal_offer_searches
   has_many :restaurant_offers, :through => :meal_offer_searches
   # attr_accessible :title, :body
-  
+
+
+  def full_name
+    [first_name, last_name].join(" ")
+  end
 
 end
