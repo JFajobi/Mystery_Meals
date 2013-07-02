@@ -8,7 +8,7 @@ describe 'New Restaurant being revealed' do
       sign_in_as(user)
       create_restaurant(restaurant)
       search_for_food
-      expect(page).to have_content('You Are Eating At...')
+      expect(page).to have_content("You're going to:")
     end
   end
 end

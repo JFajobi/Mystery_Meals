@@ -14,10 +14,8 @@ describe 'New Restaurant being revealed' do
       expect(page).to have_content(restaurant.name)
     end
 
-    it 'Once user selects the restaurant a new offer is created' do
-      previous_count = user.restaurant_offers.count
-      click_link 'Check Out The Restaurant'
-      expect(user.restaurant_offers.count).to eql(previous_count + 1)
+    pending 'Once user selects the restaurant a new offer is created' do
+      
     end
 
   end
