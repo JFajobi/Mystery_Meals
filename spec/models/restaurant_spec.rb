@@ -8,6 +8,7 @@ describe Restaurant do
   it {should validate_presence_of(:name) }
   it {should validate_presence_of(:price_anchor) }
   it {should validate_presence_of(:cuisine) }
+  it {should have_many(:menu_items) }
  
   it 'If user inputs a valid value a restaurant is generated' do
     restaurant
