@@ -10,10 +10,8 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name, :last_name
   validates_uniqueness_of :email
   has_many :meal_offer_searches
+  has_many :restaurant_offers, :through => :meal_offer_searches
   # attr_accessible :title, :body
   
-  def price_filter(user_input)
-    array = Restaurant.where(price_anchor: user_input)
-    array[rand(array.count)].name
-  end
+
 end

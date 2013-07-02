@@ -20,7 +20,7 @@ Jamaica Plain, MA 02130', 'Cubantastic food with some Caribbean flair',
 'Cuban'],['Jamaica Plain', 'JP Seafood Cafe', 10, '730 Ctr St
 Jamaica Plain, MA 02130', 'Japanese, Korean, and all the seafood you can imagine','Seafood' ],
 ['Jamaica Plain', 'Ghazal Indian Cuisine', 10, '711 Centre St
-Boston, MA 02130','We make the best Pizza... JK we make Inidian cuisine', 'Indian'],
+Boston, MA 02130','We make the best Pizza... JK we make Indian cuisine', 'Indian'],
 ['Jamaica Plain', 'Galway House', 15, '710 Centre St
 Jamaica Plain, MA 02130', "Don't head that-a-way, head to Galway",'Seafood']]
 

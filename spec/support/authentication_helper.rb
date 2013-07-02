@@ -18,6 +18,7 @@ module AuthenticationHelper
 
   def create_restaurant(restaurant)
     visit new_restaurant_path
+    fill_in 'Name', with: restaurant.name
     fill_in 'Address', with: restaurant.address
     fill_in 'Description', with: restaurant.description
     select restaurant.neighborhood, from: 'Neighborhood'
@@ -30,7 +31,7 @@ module AuthenticationHelper
     visit new_meal_offer_search_path
     select '15', from: 'Price anchor'
     select 'Jamaica Plain', from:'Neighborhood'
-    select 'Italian', from: 'Cuisine'
+    select 'Seafood', from: 'Cuisine'
     click_button 'Submit'
   end
 

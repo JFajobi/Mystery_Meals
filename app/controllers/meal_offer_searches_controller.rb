@@ -6,9 +6,9 @@ class MealOfferSearchesController < ApplicationController
   
   def create
     @meal_offer_search = current_user.meal_offer_searches.new(params[:meal_offer_search])
-
     if @meal_offer_search.save
-      redirect_to root_path, notice: 'search was successfully submitted.'
+      redirect_to restaurant_reveals_path
+
     else
       render action: "new"
     end

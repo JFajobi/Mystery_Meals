@@ -11,4 +11,5 @@ class MealOfferSearch < ActiveRecord::Base
                   'Roxbury', 'South Boston', 'South End/St. Botolph', 
                   'West Roxbury/Roslindale']
   belongs_to :user
+  belongs_to :restaurant_offer
 end
