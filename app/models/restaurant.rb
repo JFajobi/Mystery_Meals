@@ -8,12 +8,10 @@ class Restaurant < ActiveRecord::Base
 
   def self.price_filter(user_input)
     # write two unit tests in restaurant
-    # one where you run price filter with existing restaurants with 
+    # one where you run price filter with existing restaurants with
     # price anchors that match
     # and one where there are no restaurants that match
-    array = Restaurant.where(price_anchor: user_input)
-    
-    array[rand(array.count)].name
+    where(price_anchor: user_input).sample
   end
 
 end
