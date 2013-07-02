@@ -4,6 +4,7 @@ class Restaurant < ActiveRecord::Base
   mount_uploader :restaurant_image, RestaurantImageUploader
 
   has_many :menu_items
+  has_many :meal_offer_searches
 
   def self.price_filter(user_input)
     # write two unit tests in restaurant

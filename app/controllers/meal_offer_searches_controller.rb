@@ -9,6 +9,7 @@ class MealOfferSearchesController < ApplicationController
     if @meal_offer_search.save
       redirect_to restaurant_offers_path
 
+
     else
       render action: "new"
     end
