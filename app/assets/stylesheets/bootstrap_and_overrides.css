@@ -6,12 +6,36 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+/*  .yummy-pic {
+   
+    height: 400px;
+    width: 100%;
+    background-image:url('/assets/image_10.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center -320px;
+  }*/
+
   .yummy-pic {
-   /* overflow: scroll;*/
+   
     height: 400px;
     width: 100%;
     background-image:url('/assets/image_7.jpg');
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center -600px;
+  }
+
+  .notice {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    padding: 000;
+  }
+
+   .alert {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    padding: 000;
   }

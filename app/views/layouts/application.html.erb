@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myster Meals</title>
+  <title>Mystery Meals</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
       <ul class="nav">
-        <a class="brand" href='/'>Myster Meals</a>
+        <a class="brand" href='/'>Mystery Meals</a>
         <% if current_user %>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to 'Get some eats', new_meal_offer_search_path %></li>
+          <li><%= link_to 'Get Some Eats', new_meal_offer_search_path %></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
@@ -27,10 +27,11 @@
       </ul>
       </div>
     </div>
-<!-- <p class="notice"><%= notice %></p> -->
-<!-- <p class="alert"><%= alert %></p> -->
 <div class='yummy-pic'></div>
-<%= yield %>
-
+<div class="container">
+<p class="notice"><%= notice %></p> 
+<p class="alert"><%= alert %></p> 
+  <%= yield %>
+</div>
 </body>
 </html>

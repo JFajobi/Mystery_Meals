@@ -1,7 +1,11 @@
 <div class="navbar">
   <ul class="nav">
-   
-    <li><%= link_to 'Log In', new_user_session_path %></li>
-    <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <% if current_user %> 
+      <li><%= link_to 'Get Some Eats', new_meal_offer_search_path %></li>
+      <li><%= link_to 'View Past Meals', '#' %></li>
+    <% else %>
+      <li><%= link_to 'Log In', new_user_session_path %></li>
+      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <% end %>
   </ul>
 </div>
