@@ -1,11 +1,27 @@
-<div class="navbar">
-  <ul class="nav">
+<section class="row">
+ 
     <% if current_user %> 
-      <li><%= link_to 'Get Some Eats', new_meal_offer_search_path %></li>
-      <li><%= link_to 'View Past Meals', '#' %></li>
+
+      <div class="span4  boox">
+         <%= link_to 'Get Some Eats', new_meal_offer_search_path %> 
+      </div>
+
+      <div class="span4 offset4 boox">
+         <%= link_to 'View Past Meals', '#' %> 
+      </div>
+
+      <!-- TODO input proper link for meal index page -->
     <% else %>
-      <li><%= link_to 'Log In', new_user_session_path %></li>
-      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+
+      <div class="span4  boox">
+         <%= link_to 'Log In', new_user_session_path %> 
+      </div>
+
+      <div class="span4 offset4 boox">
+         <%= link_to 'Sign Up', new_user_registration_path %> 
+      </div>
     <% end %>
-  </ul>
-</div>
+   
+</section>
+    
+  
