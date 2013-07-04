@@ -14,8 +14,9 @@ describe 'New Restaurant being revealed' do
       expect(page).to have_content(restaurant.name)
     end
 
-    pending 'Once user selects the restaurant a new offer is created' do
-      
+     it 'Once a restaurant is picked link to correct restaurant page' do
+      click_link 'Click To Check Out The Restaurant'
+      expect(page).to have_content(restaurant.name)
     end
 
   end

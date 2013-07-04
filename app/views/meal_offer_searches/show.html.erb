@@ -1,5 +1,3 @@
-
-
 HEY,
 <%= @meal_offer_search.user.full_name %>
 
@@ -8,4 +6,6 @@ You're going to:
 <%= @meal_offer_search.restaurant.name %>
 
 have fun and stuff
+
+<%= link_to "Click To Check Out The Restaurant", restaurant_menu_items_path(@meal_offer_search.restaurant.name) , :class => "btn btn-success" %>
 

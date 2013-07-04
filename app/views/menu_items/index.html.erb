@@ -1,0 +1,30 @@
+<div id="restaurant_name"> <h1> Welcome to <%= @restaurant %> </h1> </div>
+<section class="row">
+  <div class="span4 offset1">
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail">
+          <!-- <img data-src="holder.js/300x200" alt="">   Change from img to div tag and insert 300x200px image there-->
+          <%= image_tag "image_4.jpg" %>
+          <h3>Meal Option 1</h3> <!-- Change to a instance variable @meal which contains the menu_item.name  -->
+          <p>Yummy Yummy for you're empty Tummy!!!</p>
+          <%= link_to "Choose Me!", root_path , :class => "btn btn-success" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="span4 offset2">
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail">
+          <!-- <img data-src="holder.js/300x200" alt=""> Change from img to div tag and insert 300x200px image there -->
+          <%= image_tag "image_4.jpg" %>
+          <h3>Meal Option 2</h3> <!-- Change to a instance variable @meal which contains the menu_item.name  -->
+          <p>Yummy Yummy for you're empty Tummy!!!</p>
+          <%= link_to "NO Choose Me!", root_path , :class => "btn btn-success" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

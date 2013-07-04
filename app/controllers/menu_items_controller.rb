@@ -17,4 +17,8 @@ class MenuItemsController < ApplicationController
     end
   end
 
+  def index
+    @restaurant = current_user.meal_offer_searches.last.restaurant.name
+  end
+
 end

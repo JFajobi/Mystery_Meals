@@ -16,7 +16,9 @@
     background-position:center -320px;
   }*/
 
-  .yummy-pic {
+  /*Not going to use now ^^^*/
+
+  /*.yummy-pic {
    
     height: 400px;
     width: 100%;
@@ -45,4 +47,8 @@
     background-color: rgba(0,0,0, .10);
     height: 250px;
     border-radius: 5px;
+  }*/
+
+  #restaurant_name {
+    text-align: center; 
   }
