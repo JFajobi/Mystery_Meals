@@ -4,6 +4,9 @@ class MenuItemsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @menu_item = MenuItem.new  # or @restaurant.menu_item.build()
   end
+  
+  def show
+  end
 
   def create
     @menu_item = MenuItem.new(params[:menu_item])
@@ -11,7 +14,7 @@ class MenuItemsController < ApplicationController
     @menu_item.restaurant = @restaurant
     
     if @menu_item.save
-      redirect_to root_path, notice: 'Menu Item Was Created!!!'
+      redirect_to root_path
     else
       render action: "new"
     end

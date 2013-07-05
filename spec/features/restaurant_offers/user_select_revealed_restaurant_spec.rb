@@ -5,7 +5,7 @@ describe 'New Restaurant being revealed' do
   let(:restaurant){FactoryGirl.create(:restaurant)}
   before(:each) do
     sign_in_as(user)
-    create_restaurant(restaurant)
+    restaurant
     search_for_food
   end
   context 'user has entered the proper info to search for a restaurant' do

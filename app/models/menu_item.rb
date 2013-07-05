@@ -4,5 +4,6 @@ class MenuItem < ActiveRecord::Base
    mount_uploader :menu_item_image, MenuItemImageUploader
 
   belongs_to :restaurant
+  has_many :meals
 
 end

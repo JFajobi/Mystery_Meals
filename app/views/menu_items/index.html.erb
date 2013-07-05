@@ -7,8 +7,14 @@
           <!-- <img data-src="holder.js/300x200" alt="">   Change from img to div tag and insert 300x200px image there-->
           <%= image_tag "image_4.jpg" %>
           <h3>Meal Option 1</h3> <!-- Change to a instance variable @meal which contains the menu_item.name  -->
-          <p>Yummy Yummy for you're empty Tummy!!!</p>
-          <%= link_to "Choose Me!", root_path , :class => "btn btn-success" %>
+          <p>Yummy Yummy for your empty Tummy!!!</p>
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+          <!-- change root_path to restaurant_menu_item_path(@item1_id) VV BELOW!! -->
+          <%= link_to "Choose Me!", restaurant_menu_item_path(@item1_id), :controller => :meals_controller, :action => :create, :method => :post, :class => "btn btn-success" %>
         </div>
       </li>
     </ul>
@@ -21,8 +27,14 @@
           <!-- <img data-src="holder.js/300x200" alt=""> Change from img to div tag and insert 300x200px image there -->
           <%= image_tag "image_4.jpg" %>
           <h3>Meal Option 2</h3> <!-- Change to a instance variable @meal which contains the menu_item.name  -->
-          <p>Yummy Yummy for you're empty Tummy!!!</p>
-          <%= link_to "NO Choose Me!", root_path , :class => "btn btn-success" %>
+          <p>Yummy Yummy for your empty Tummy!!!</p>
+
+<!--  -->
+<!--  -->
+<!--  --> 
+<!--  -->
+          <!-- change root_path to restaurant_menu_item_path(@item2_id) VV BELOW!! -->
+          <%= link_to "NO Choose Me!", restaurant_menu_item_path(@item2_id), :controller => :meals_controller, :action => :create, :method => :post, :class => "btn btn-success" %>
         </div>
       </li>
     </ul>

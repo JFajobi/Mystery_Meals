@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(params[:restaurant])
 
     if @restaurant.save
-      redirect_to root_path, notice: 'restaurant was successfully submitted.'
+      redirect_to root_path
     else
       render action: "new"
     end

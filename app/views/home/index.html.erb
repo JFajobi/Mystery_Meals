@@ -1,26 +1,29 @@
 <section class="row">
- 
-    <% if current_user %> 
+  <div class="span6" id="form-box">
+    <h2 id="intro-text">The best way to discover new restaurants in your neighborhood</h2>
+      <% if current_user %> 
 
-      <div class="span4  boox">
-         <%= link_to 'Get Some Eats', new_meal_offer_search_path %> 
-      </div>
+      
+         <%= link_to 'Get Some Eats', new_meal_offer_search_path, :class => 'btn btn-inverse' %> 
+      
 
-      <div class="span4 offset4 boox">
-         <%= link_to 'View Past Meals', '#' %> 
-      </div>
+      
+         <%= link_to 'View Past Meals', '#', :class => 'btn btn-inverse' %> 
+      
 
       <!-- TODO input proper link for meal index page -->
     <% else %>
 
-      <div class="span4  boox">
-         <%= link_to 'Log In', new_user_session_path %> 
-      </div>
+      
+         <%= link_to 'Log In', new_user_session_path, :class => 'btn btn-inverse' %> 
+      
 
-      <div class="span4 offset4 boox">
-         <%= link_to 'Sign Up', new_user_registration_path %> 
-      </div>
+      
+         <%= link_to 'Sign Up', new_user_registration_path, :class => 'btn btn-inverse' %> 
+      
     <% end %>
+  </div>
+
    
 </section>
     

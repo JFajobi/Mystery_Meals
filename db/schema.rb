@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702182750) do
+ActiveRecord::Schema.define(:version => 20130704194619) do
 
   create_table "meal_offer_searches", :force => true do |t|
     t.string   "neighborhood"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(:version => 20130702182750) do
     t.datetime "updated_at",          :null => false
     t.integer  "restaurant_offer_id"
     t.integer  "restaurant_id"
+  end
+
+  create_table "meals", :force => true do |t|
+    t.integer  "user_id",       :null => false
+    t.integer  "restaurant_id", :null => false
+    t.integer  "menu_item_id",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "menu_items", :force => true do |t|
@@ -55,16 +63,15 @@ ActiveRecord::Schema.define(:version => 20130702182750) do
   end
 
   create_table "restaurants", :force => true do |t|
-    t.text     "address",             :null => false
+    t.text     "address",          :null => false
     t.string   "restaurant_image"
-    t.text     "description",         :null => false
-    t.text     "neighborhood",        :null => false
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
-    t.integer  "price_anchor",        :null => false
-    t.string   "name",                :null => false
-    t.string   "cuisine",             :null => false
-    t.integer  "restaurant_offer_id"
+    t.text     "description",      :null => false
+    t.text     "neighborhood",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "price_anchor",     :null => false
+    t.string   "name",             :null => false
+    t.string   "cuisine",          :null => false
   end
 
   create_table "users", :force => true do |t|

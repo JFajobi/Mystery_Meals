@@ -3,7 +3,7 @@ MnM::Application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  
+  resources :meals
   resources :meal_offer_searches
   
   resources :restaurants do

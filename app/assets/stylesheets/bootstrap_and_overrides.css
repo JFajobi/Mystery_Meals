@@ -5,27 +5,27 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+  #intro-text {
+    
+  }
 
-/*  .yummy-pic {
+  #form-box{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 3% 3% 3% 3%;
+  font-size: 25px;
+  line-height: 1.26em;
+  bottom: 0px;
+  }
+  
+  .yummy-pic {
    
-    height: 400px;
+    height: 900px;
     width: 100%;
-    background-image:url('/assets/image_10.jpg');
+    background-image:url('/assets/image_21.jpg');
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-position:center -320px;
-  }*/
-
-  /*Not going to use now ^^^*/
-
-  /*.yummy-pic {
-   
-    height: 400px;
-    width: 100%;
-    background-image:url('/assets/image_7.jpg');
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center -600px;
+    background-position:center;
   }
 
   .notice {
@@ -47,7 +47,7 @@
     background-color: rgba(0,0,0, .10);
     height: 250px;
     border-radius: 5px;
-  }*/
+  }
 
   #restaurant_name {
     text-align: center; 
