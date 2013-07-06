@@ -1,11 +1,14 @@
-HEY,
-<%= @meal_offer_search.user.full_name %>
+<div class='form-box span4 offset3'>
+  <h3>
+    Hey,  
+    <%= @meal_offer_search.user.full_name %>
+  </h3>
 
-You're going to:
+  You're going to:<br>
 
-<%= @meal_offer_search.restaurant.name %>
+  <%= @meal_offer_search.restaurant.name %><br><br>
 
-have fun and stuff
 
-<%= link_to "Click To Check Out The Restaurant", restaurant_menu_items_path(@meal_offer_search.restaurant.name) , :class => "btn btn-success" %>
+  <%= link_to "Click To Check Out The Restaurant", restaurant_menu_items_path(@meal_offer_search.restaurant.name) , :class => "btn btn-success" %>
 
+<div>

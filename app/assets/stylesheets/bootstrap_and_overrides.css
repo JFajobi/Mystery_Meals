@@ -9,13 +9,58 @@
     
   }
 
-  #form-box{
+  #header{
+    display: block;
+    width: 100%;
+    background-color: #000;
+    height: 75px;
+    margin-bottom: 120px;
+  }
+
+  .navlist {
+    /*display: block;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;*/
+    height: 75px;
+    overflow: hidden;
+  }
+
+  .navlist li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: baseline;
+    width: 120px;
+    text-align: center;
+    height: 100%;
+    padding-top: 30px;
+    transition: all .5s linear;
+
+  }
+
+  .navlist li:hover {
+    background-color: #51a351;
+  }
+
+  .linka {
+    font-size: 1.2em;
+    color: white;
+  }
+
+  .linka:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .form-box{
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 3% 3% 3% 3%;
   font-size: 25px;
   line-height: 1.26em;
   bottom: 0px;
+  text-align: center;
   }
   
   .yummy-pic {
@@ -51,4 +96,5 @@
 
   #restaurant_name {
     text-align: center; 
+
   }

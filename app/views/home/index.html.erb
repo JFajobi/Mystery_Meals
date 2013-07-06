@@ -1,25 +1,26 @@
 <section class="row">
-  <div class="span6" id="form-box">
-    <h2 id="intro-text">The best way to discover new restaurants in your neighborhood</h2>
+  <div class="span5 form-box offset3">
+    <h1>Mystery Meals</h1>
+    <h4 id="intro-text">The best way to discover new restaurants in your neighborhood</h4>
       <% if current_user %> 
 
       
-         <%= link_to 'Get Some Eats', new_meal_offer_search_path, :class => 'btn btn-inverse' %> 
+         <%= link_to 'Get Some Eats', new_meal_offer_search_path, :class => 'btn btn-success' %> 
       
 
       
-         <%= link_to 'View Past Meals', '#', :class => 'btn btn-inverse' %> 
+         <%= link_to 'View Past Meals', '#', :class => 'btn btn-success' %> 
       
 
       <!-- TODO input proper link for meal index page -->
     <% else %>
 
       
-         <%= link_to 'Log In', new_user_session_path, :class => 'btn btn-inverse' %> 
+         <%= link_to 'Log In', new_user_session_path, :class => 'btn btn-success' %> 
       
 
       
-         <%= link_to 'Sign Up', new_user_registration_path, :class => 'btn btn-inverse' %> 
+         <%= link_to 'Sign Up', new_user_registration_path, :class => 'btn btn-success' %> 
       
     <% end %>
   </div>

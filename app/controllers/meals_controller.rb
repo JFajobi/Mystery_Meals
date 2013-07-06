@@ -12,7 +12,7 @@ class MealsController < ApplicationController
 
 
     if @meal.save
-      redirect_to restaurant_menu_item_path(@meal.menu_item_id)
+       redirect_to root_path  # redirect_to restaurant_menu_item_path(current_user.meal_offer_searches.last.restaurant, ????)
     else
       render action: "new"
     end
