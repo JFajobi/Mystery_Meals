@@ -1,13 +1,4 @@
-/*
-  =require twitter-bootstrap-static/bootstrap
 
-  Use Font Awesome icons (default)
-  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
-  =require twitter-bootstrap-static/fontawesome
-  */
-
-<% food_images = ['image_21.jpg','image_7.jpg','image_8.jpg','image_9.jpg','image_12.jpg','image_22.jpg','image_23.jpg'] %>
-  
   #header{
     display: block;
     width: 100%;
