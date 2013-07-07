@@ -9,7 +9,7 @@ describe 'Signing up for Mystery Meals' do
   context 'signed out user' do
     it 'has all the forms needed to make a new account' do 
       visit root_path
-      first('.navbar').click_link 'Sign Up'
+      first('.navlist').click_link 'Sign Up'
       expect(page).to have_content('Password')
       expect(page).to have_content('Email')
     end

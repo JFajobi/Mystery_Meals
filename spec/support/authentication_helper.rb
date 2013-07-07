@@ -22,14 +22,14 @@ module AuthenticationHelper
     fill_in 'Address', with: restaurant.address
     fill_in 'Description', with: restaurant.description
     select restaurant.neighborhood, from: 'Neighborhood'
-    select restaurant.price_anchor, from: 'Price anchor'
+    select restaurant.price_anchor, from: 'Price'
     select restaurant.cuisine, from: 'Cuisine'
     click_button 'Submit'
   end
 
   def search_for_food
     visit new_meal_offer_search_path
-    select '15', from: 'Price anchor'
+    select '15', from: 'Price'
     select 'Jamaica Plain', from:'Neighborhood'
     select 'Seafood', from: 'Cuisine'
     click_button 'Submit'

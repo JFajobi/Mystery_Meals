@@ -9,9 +9,9 @@ class Restaurant < ActiveRecord::Base
   validates_presence_of :address, :description, :neighborhood, :name, :price_anchor, :cuisine
   mount_uploader :restaurant_image, RestaurantImageUploader
 
-  has_many :menu_items
-  has_many :meals
-  has_many :meal_offer_searches
+  has_many :menu_items, dependent: :destroy
+  has_many :meals, dependent: :destroy
+  has_many :meal_offer_searches, dependent: :destroy
 
   def self.price_filter(user_input)
     # write two unit tests in restaurant

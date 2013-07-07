@@ -1,6 +1,6 @@
 <section class="row">
   <div class="span6 form-box offset3">
-    <h2>Change your password</h2>
+    <h2 class='sign-font'>Change your password</h2>
 
     <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
       <%= devise_error_messages! %>

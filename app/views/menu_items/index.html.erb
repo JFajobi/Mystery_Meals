@@ -1,4 +1,4 @@
-<div id="restaurant_name"> <h1> Welcome to <%= @restaurant %> </h1> </div><br>
+<div id="restaurant_name"> <h1> Welcome to <%= @restaurant.name %> </h1> </div><br>
 <section class="row">
   <div class="span4 form-box">
     <ul class="thumbnails">
@@ -14,7 +14,11 @@
 <!--  -->
 <!--  -->
           <!-- change root_path to restaurant_menu_item_path(@restaurant, @item1_id) VV BELOW!! -->
-          <%= link_to "Choose Me!", root_path, :controller => :meals_controller, :action => :create, :method => :post, :class => "btn btn-success" %>
+          <%= simple_form_for [@restaurant, @item1] do |f| %>
+            <%= f.hidden_field :selected, value: true %>
+            <%= f.submit "Choose ME!" %>
+          <% end %>
+          <%# link_to "Choose Me!", restaurant_menu_item_path(@restaurant, @item1_id), :method => :post, :class => "btn btn-success" %>
         </div>
       </li>
     </ul>
@@ -34,7 +38,7 @@
 <!--  --> 
 <!--  -->
           <!-- change root_path to restaurant_menu_item_path(@restaurant, @item2_id) VV BELOW!! -->
-          <%= link_to "NO Choose Me!", root_path, :controller => :meals_controller, :action => :create, :method => :post, :class => "btn btn-success" %>
+          <%# link_to "NO Choose Me!", restaurant_menu_item_path(@restaurant, @item2_id), :controller => :meals_controller, :action => :create, :method => :post, :class => "btn btn-success" %>
         </div>
       </li>
     </ul>

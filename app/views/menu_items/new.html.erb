@@ -1,9 +1,10 @@
-<%= simple_form_for [@restaurant, @menu_item] do |f| %>
-  <%= f.input :dish %>
-  <%= f.input :description %>
-  <%= f.input :cuisine, collection: ['Italian','USA','SPICY SHIT'] %>
-  <%= f.file_field :image %> </br>
-  <%= f.label :remote_menu_item_image_url, 'Or insert image URL' %>
-  <%= f.text_field :remote_menu_item_image_url %></br>
-  <%= f.submit 'Submit' %>
-<% end %>
+<div class='form-box span5 offset3'>
+  <%= simple_form_for [@restaurant, @menu_item] do |f| %>
+    <%= f.input :dish %>
+    <%= f.input :description, input_html: { rows: 10 } %>
+    <%= f.input :cuisine, collection: ['Italian','USA','SPICY SHIT'] %>
+    <%= f.label :remote_menu_item_image_url, 'Insert image URL' %>
+    <%= f.text_field :remote_menu_item_image_url %></br>
+    <%= f.submit 'Submit', :class => 'btn btn-success' %>
+  <% end %>
+</div>

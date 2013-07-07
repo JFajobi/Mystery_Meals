@@ -8,9 +8,9 @@ describe 'adding a new restaurant' do
     fill_in 'Name', with: 'Mikes Dog Shack'
     fill_in 'Description', with: 'the best place you are ever gonna eat'
     select 'Back Bay', from: 'Neighborhood'
-    select '15', from: 'Price anchor'
+    select 15, from: 'Price'
     select 'Italian', from: 'Cuisine'
-    click_button 'Submit'
+    click_on 'Submit'    
     expect(Restaurant.count).to eql(pre_count + 1)
   end
 end

@@ -9,8 +9,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :admin
   validates_presence_of :first_name, :last_name
   validates_uniqueness_of :email
-  has_many :meal_offer_searches
-  has_many :meals
+  has_many :meal_offer_searches, dependent: :destroy
+  has_many :meals, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   
   # attr_accessible :title, :body
 

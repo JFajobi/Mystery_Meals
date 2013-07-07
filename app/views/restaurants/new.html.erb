@@ -1,12 +1,19 @@
-<%= simple_form_for @restaurant, :html => {:multipart => true} do |f| %>
-  <%= f.input :address %>
-  <%= f.input :name %>
-  <%= f.input :price_anchor, collection: [10,15,20,30]  %>
-  <%= f.input :cuisine, collection: MealOfferSearch::CUISINE  %>
-  <%= f.input :description %>
-  <%= f.file_field :image %> </br>
-  <%= f.label :remote_restaurant_image_url, 'Or insert image URL' %>
-  <%= f.text_field :remote_restaurant_image_url %>
-  <%= f.input :neighborhood, collection: MealOfferSearch::NEIGHBORHOOD  %>
-  <%= f.submit 'Submit' %>
-<%- end %>
+<div class='row'>
+
+    <%= simple_form_for @restaurant, :html => {:multipart => true} do |f| %>
+      <div class='form-box span4 offset1'>
+        <%= f.input :address, input_html: { rows: 10 } %>
+        <%= f.input :name %>
+        <%= f.input :price_anchor, label: 'Price', collection: [10,15,20,30]  %>
+        <%= f.input :cuisine, collection: MealOfferSearch::CUISINE  %>
+      </div>
+      <div class='form-box span4' >
+        <%= f.input :description, input_html: { rows: 10 } %>
+        </br>
+        <%= f.label :remote_restaurant_image_url, 'Insert image URL' %>
+        <%= f.text_field :remote_restaurant_image_url %>
+        <%= f.input :neighborhood, collection: MealOfferSearch::NEIGHBORHOOD  %>
+        <%= f.submit 'Submit', :class => 'btn btn-success' %>
+    <%- end %>
+  </div>
+</div>

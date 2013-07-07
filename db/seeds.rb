@@ -22,10 +22,12 @@ Jamaica Plain, MA 02130', 'Japanese, Korean, and all the seafood you can imagine
 ['Jamaica Plain', 'Ghazal Indian Cuisine', 10, '711 Centre St
 Boston, MA 02130','We make the best Pizza... JK we make Indian cuisine', 'Indian'],
 ['Jamaica Plain', 'Galway House', 15, '710 Centre St
-Jamaica Plain, MA 02130', "Don't head that-a-way, head to Galway",'Seafood']]
+Jamaica Plain, MA 02130', "Don't head that-a-way, head to Galway",'Seafood'],
+['Jamaica Plain', 'Blue Nile Restaurant', 20, '389 Centre St
+Boston, MA 02130', "Check us out... OR ELSE!",'Seafood']]
 
 restaurants.each  do |restaurant|
-  Restaurant.create(:neighborhood => restaurant[0], :name => restaurant[1], :price_anchor => restaurant[2], :address => restaurant[3], :description => restaurant[4], :cuisine => restaurant[5])
+  Restaurant.find_or_create_by_neighborhood_and_name_and_price_anchor_and_address_and_description_and_cuisine(:neighborhood => restaurant[0], :name => restaurant[1], :price_anchor => restaurant[2], :address => restaurant[3], :description => restaurant[4], :cuisine => restaurant[5])
 end
 
 

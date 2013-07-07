@@ -8,7 +8,19 @@
 
   <%= @meal_offer_search.restaurant.name %><br><br>
 
+  <% if @meal_offer_search.selected_meal_id %>
+    You've selected:<br>
+    <%= @meal_offer_search.selected_meal.dish %>
+    <br><br>
+  <% end %>
 
-  <%= link_to "Click To Check Out The Restaurant", restaurant_menu_items_path(@meal_offer_search.restaurant.name) , :class => "btn btn-success" %>
+  <% @offers.each do |offer| %>
+    <%= simple_form_for @meal_offer_search do |f| %>
+      <%= f.hidden_field :selected_meal_id, value: offer.id %>
+      <%= f.submit "pick #{offer.dish}" %>
+    <% end %>
+  <% end %>
+
+  <%= link_to "Click To Check Out The Restaurant", restaurant_menu_items_path(@meal_offer_search.restaurant) , :class => "btn btn-success" %>
 
 <div>

@@ -5,10 +5,9 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
-  #intro-text {
-    
-  }
 
+<% food_images = ['image_21.jpg','image_7.jpg','image_8.jpg','image_9.jpg','image_12.jpg','image_22.jpg','image_23.jpg'] %>
+  
   #header{
     display: block;
     width: 100%;
@@ -17,6 +16,15 @@
     margin-bottom: 120px;
   }
 
+  .entry-field {
+    height: 30px;
+    width: 40px;
+
+  }
+
+  .sign-font {
+    color: #51a351;
+  }
   .navlist {
     /*display: block;
     width: 600px;
@@ -25,6 +33,18 @@
     margin-left: -300px;*/
     height: 75px;
     overflow: hidden;
+  }
+
+  .bottom-link {
+    text-decoration: none;
+    color: white;
+    transition: all .3s linear;
+
+  }
+
+  .bottom-link:hover {
+    text-decoration: none;
+    color: #51a351;
   }
 
   .navlist li {
@@ -67,7 +87,7 @@
    
     height: 900px;
     width: 100%;
-    background-image:url('/assets/image_21.jpg');
+    background-image:url('image_21.jpg');
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center;

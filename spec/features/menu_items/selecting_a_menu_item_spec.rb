@@ -26,7 +26,6 @@ describe 'user selecting a menu item to eat' do
    it 'once a user selects the second meal a new meal is created' do
     previous_count = Meal.count
     click_link 'NO Choose Me!'
-    binding.pry
     expect(Meal.count).to eql(previous_count + 1)
   end
 

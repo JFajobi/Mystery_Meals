@@ -20,8 +20,19 @@ class MenuItemsController < ApplicationController
     end
   end
 
+  def update
+    @menu_item = MenuItem.find(params[:id])
+
+    if @menu_item.update_attributes(params[:selected])
+      redirect_to root_path
+    end
+  end
+
   def index
-    @restaurant = current_user.meal_offer_searches.last.restaurant.name
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @item1 = @restaurant.menu_items.first
+    @item2 = @restaurant.menu_items.last
+    # @restaurant = current_user.meal_offer_searches.last.restaurant
   end
 
 end

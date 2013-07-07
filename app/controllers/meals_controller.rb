@@ -3,7 +3,7 @@ class MealsController < ApplicationController
   def create
     @meal = Meal.new
     @user = current_user.id
-    @restaurant = current_user.meal_offer_searches.last.restaurant_id
+    @restaurant = current_user.meal_offer_searches.last
     @item1_id = Restaurant.where(id: @restaurant).menu_items.first
     @item2_id = Restaurant.where(id: @restaurant).menu_items.last
     @meal.restaurant_id = @restaurant
