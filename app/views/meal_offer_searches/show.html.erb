@@ -17,10 +17,8 @@
   <% @offers.each do |offer| %>
     <%= simple_form_for @meal_offer_search do |f| %>
       <%= f.hidden_field :selected_meal_id, value: offer.id %>
-      <%= f.submit "pick #{offer.dish}" %>
+      <%= f.submit "Pick #{offer.dish}", :class => "btn btn-success" %>
     <% end %>
   <% end %>
-
-  <%= link_to "Click To Check Out The Restaurant", restaurant_menu_items_path(@meal_offer_search.restaurant) , :class => "btn btn-success" %>
 
 <div>

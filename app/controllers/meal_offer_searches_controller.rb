@@ -12,8 +12,9 @@ class MealOfferSearchesController < ApplicationController
 
   def update
     @meal_offer_search = MealOfferSearch.find(params[:id])
-    @meal_offer_search.update_attributes(params[:meal_offer_search])
-    redirect_to meal_offer_search_path(@meal_offer_search)
+    if @meal_offer_search.update_attributes(params[:meal_offer_search])
+      redirect_to restaurant_path(@meal_offer_search.restaurant_id)
+    end
   end
 
   def create

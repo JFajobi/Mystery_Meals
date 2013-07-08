@@ -14,10 +14,6 @@ class Restaurant < ActiveRecord::Base
   has_many :meal_offer_searches, dependent: :destroy
 
   def self.price_filter(user_input)
-    # write two unit tests in restaurant
-    # one where you run price filter with existing restaurants with
-    # price anchors that match
-    # and one where there are no restaurants that match
     where(price_anchor: user_input).sample
   end
 

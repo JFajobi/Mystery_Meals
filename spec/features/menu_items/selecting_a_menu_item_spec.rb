@@ -4,32 +4,27 @@ describe 'user selecting a menu item to eat' do
   let(:user){FactoryGirl.create(:user)}
   let(:restaurant){FactoryGirl.create(:restaurant)}
   let(:menu_item){FactoryGirl.create(:menu_item)}
+  let(:meal_offer_search){user.meal_offer_searches.last}
   before(:each) do
     sign_in_as(user)
     create_restaurant(restaurant)
     menu_item
+    FactoryGirl.create(:menu_item, dish: 'Tuna Sandwhich')
     search_for_food
-    click_link 'Click To Check Out The Restaurant'
   end
 
   it 'should have two food options per restaurant' do
-    expect(page).to have_content('Meal Option 1')
-    expect(page).to have_content('Meal Option 2')
+    expect(page).to have_content('Pick Chicki Bicki SURPRISE!!')
+    expect(page).to have_content('Pick Tuna Sandwhich')
   end
 
-  it 'once a user selects the first meal a new meal is created' do
-    previous_count = Meal.count
-    click_link 'Choose Me!'
-    expect(Meal.count).to eql(previous_count + 1)
+  it 'once a user selects the first meal it gets selected' do
+    meal_offer_search
+    click_on 'Pick Tuna Sandwhich'
+    expect(meal_offer_search.selected).to eql(true)
   end
 
-   it 'once a user selects the second meal a new meal is created' do
-    previous_count = Meal.count
-    click_link 'NO Choose Me!'
-    expect(Meal.count).to eql(previous_count + 1)
-  end
-
-  it 'When user picks the first item they are taken to a confirmation page with the restaurant address' do
+  pending 'When user picks the first item they are taken to a confirmation page with the restaurant address' do
     click_link 'Choose Me!'
     expect(page).to have_content(restaurant.address)
     expect(page).to have_content(restaurant.neighborhood)
@@ -39,7 +34,7 @@ describe 'user selecting a menu item to eat' do
   end
 
 
-  it 'When user picks the second item they are taken to a confirmation page with the restaurant address' do
+  pending 'When user picks the second item they are taken to a confirmation page with the restaurant address' do
     click_link 'NO Choose Me!'
     expect(page).to have_content(restaurant.address)
     expect(page).to have_content(restaurant.neighborhood)
