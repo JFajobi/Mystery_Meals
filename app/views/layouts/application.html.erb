@@ -8,26 +8,28 @@
 </head>
 <body>
   <div class='yummy-pic'>
-  <header id= "header">    
-    <ul class="navlist span12 ">
-      <li><%= link_to 'Mystery Meals', root_path, :class => 'linka' %></li>
-      <% if current_user %>
+    <header id= "header">    
+      <ul class="navlist span12 ">
+        <li><%= link_to 'Mystery Meals', root_path, :class => 'linka' %></li>
+        <small>ALPHA</small>
+        <% if current_user %>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => 'linka' %></li>
         <li><%= link_to 'Get Some Eats', new_meal_offer_search_path, :class => 'linka' %></li>
-      <% else %>
+        <% else %>
         <li><%= link_to 'Sign Up', new_user_registration_path, :class => 'linka' %></li>
         <li><%= link_to 'Sign In', new_user_session_path, :class => 'linka' %></li>
-      <% end %>
-      <% if current_user.try(:admin?) %>
+        <% end %>
+        <% if current_user.try(:admin?) %>
         <li><%= link_to 'Backend', rails_admin_path, :class => 'linka' %></li>
-      <% end %>
-    </ul>
-</header>    
-<div class="container">
-<p class="notice"><%= notice %></p> 
-<p class="alert"><%= alert %></p> 
-  <%= yield %>
-</div>
-</div>
+
+        <% end %>
+      </ul>
+    </header>    
+    <div class="container">
+      <p class="notice"><%= notice %></p> 
+      <p class="alert"><%= alert %></p> 
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

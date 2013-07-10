@@ -9,14 +9,14 @@
           <h3>Meal Option 1</h3> <!-- Change to a instance variable @meal which contains the menu_item.name  -->
           <p><small>Yummy Yummy for your empty Tummy!!!</small></p><br>
 
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
+          <!--  -->
+          <!--  -->
+          <!--  -->
+          <!--  -->
           <!-- change root_path to restaurant_menu_item_path(@restaurant, @item1_id) VV BELOW!! -->
           <%= simple_form_for [@restaurant, @item1] do |f| %>
-            <%= f.hidden_field :selected, value: true %>
-            <%= f.submit "Choose ME!" %>
+          <%= f.hidden_field :selected, value: true %>
+          <%= f.submit "Choose ME!" %>
           <% end %>
           <%# link_to "Choose Me!", restaurant_menu_item_path(@restaurant, @item1_id), :method => :post, :class => "btn btn-success" %>
         </div>
@@ -33,10 +33,10 @@
           <h3>Meal Option 2</h3> <!-- Change to a instance variable @meal which contains the menu_item.name  -->
           <p><small>Yummy Yummy for your empty Tummy!!!</small></p><br>
 
-<!--  -->
-<!--  -->
-<!--  --> 
-<!--  -->
+          <!--  -->
+          <!--  -->
+          <!--  --> 
+          <!--  -->
           <!-- change root_path to restaurant_menu_item_path(@restaurant, @item2_id) VV BELOW!! -->
           <%# link_to "NO Choose Me!", restaurant_menu_item_path(@restaurant, @item2_id), :controller => :meals_controller, :action => :create, :method => :post, :class => "btn btn-success" %>
         </div>

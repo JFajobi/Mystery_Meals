@@ -1,24 +1,41 @@
-<div class='form-box span4 offset3'>
-  <h3>
-    Hey,  
-    <%= @meal_offer_search.user.full_name %>
-  </h3>
-
-  You're going to:<br>
-
-  <%= @meal_offer_search.restaurant.name %><br><br>
-
-  <% if @meal_offer_search.selected_meal_id %>
-    You've selected:<br>
-    <%= @meal_offer_search.selected_meal.dish %>
-    <br><br>
-  <% end %>
-
-  <% @offers.each do |offer| %>
-    <%= simple_form_for @meal_offer_search do |f| %>
+<% if !@meal_offer_search.selected_meal_id %>
+   <div class='form-box span4 offset3'>
+    <h2>
+      Hey,  
+      <span><%= @meal_offer_search.user.full_name %></span>
+    </h2>
+    <span>You're going to:</span><br>
+    <%= @meal_offer_search.restaurant.name %><br><br> 
+    <% @offers.each do |offer| %>
+      <%= simple_form_for @meal_offer_search do |f| %>
       <%= f.hidden_field :selected_meal_id, value: offer.id %>
       <%= f.submit "Pick #{offer.dish}", :class => "btn btn-success" %>
+     <% end %>
     <% end %>
   <% end %>
+</div>
 
-<div>
+
+<% if @meal_offer_search.selected_meal_id %>
+  <div class='form-box span4 offset1'>
+    <h2>
+      Hey,  
+      <span><%= @meal_offer_search.user.full_name %></span>
+    </h2>
+    <span>You're going to:</span><br>
+    <%= @meal_offer_search.restaurant.name %><br><br> 
+    <span><p>you selected:</p></span>
+      <%= MenuItem.find(@meal_offer_search.selected_meal_id).dish %>
+      
+  </div>
+  
+
+  <div class='form-box span4 offset2'>
+    <span><p>Head To:</p></span>
+    <%= @meal_offer_search.restaurant.address %><br><br>
+    <span><p class='p-block'>Bring:</p></span><br>
+    <%= @meal_offer_search.restaurant.price_anchor %>
+    <p class='p-block'>&nbspBucks,</p><br>
+    <p>Enjoy Some Good Eats!</p>
+  </div>
+<% end %>

@@ -3,6 +3,6 @@ FactoryGirl.define do
     dish 'Chicki Bicki SURPRISE!!'
     cuisine "Italian"
     description "ITS A SURPRISE"
-    restaurant_id 56798009
+    restaurant
   end
 end

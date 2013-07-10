@@ -7,13 +7,13 @@ class MealOfferSearchesController < ApplicationController
   def show
     @meal_offer_search = MealOfferSearch.find(params[:id])
     @offers = @meal_offer_search.restaurant.menu_items.sample(2)
-
   end
 
   def update
     @meal_offer_search = MealOfferSearch.find(params[:id])
+    
     if @meal_offer_search.update_attributes(params[:meal_offer_search])
-      redirect_to restaurant_path(@meal_offer_search.restaurant_id)
+      render action: 'show'
     end
   end
 

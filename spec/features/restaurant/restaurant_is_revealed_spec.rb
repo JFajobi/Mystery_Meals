@@ -7,7 +7,7 @@ describe 'New Restaurant being revealed' do
     it 'user is shown what restaurant they are eating at' do
       sign_in_as(user)
       restaurant
-      search_for_food
+      search_for_food(restaurant.price_anchor)
       expect(page).to have_content("You're going to:")
     end
   end

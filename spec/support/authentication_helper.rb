@@ -27,9 +27,9 @@ module AuthenticationHelper
     click_button 'Submit'
   end
 
-  def search_for_food
+  def search_for_food(price)
     visit new_meal_offer_search_path
-    select '15', from: 'Price'
+    select price, from: 'Price'
     select 'Jamaica Plain', from:'Neighborhood'
     select 'Seafood', from: 'Cuisine'
     click_button 'Submit'

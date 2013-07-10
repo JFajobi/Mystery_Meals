@@ -6,6 +6,5 @@ FactoryGirl.define do
     neighborhood "Jamaica Plain"
     cuisine 'Italian'
     price_anchor 15
-    id 56798009
   end
 end

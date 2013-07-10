@@ -1,9 +1,9 @@
 <div class='form-box span5 offset3'>
   <h3>Fill in to find your next restaurant</h3>
   <%= simple_form_for @meal_offer_search do |f| %>
-    <%= f.input :price_anchor, label: 'Price', collection: [10,15,20,30] %>
-    <%= f.input :neighborhood, collection: MealOfferSearch::NEIGHBORHOOD %>
-    <%= f.input :cuisine, collection: MealOfferSearch::CUISINE %>
-    <%= f.submit 'Submit', :class => 'btn btn-success' %>
+  <%= f.input :price_anchor, label: 'Price', collection: [10,15,20,30] %>
+  <%= f.input :neighborhood, collection: MealOfferSearch::NEIGHBORHOOD %>
+  <%= f.input :cuisine, collection: MealOfferSearch::CUISINE %>
+  <%= f.submit 'Submit', :class => 'btn btn-success' %>
   <% end %>
-<div>
+</div>
