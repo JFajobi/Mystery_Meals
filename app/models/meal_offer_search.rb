@@ -4,14 +4,9 @@ class MealOfferSearch < ActiveRecord::Base
 
 
 
-  CUISINE = ['Italian', 'BBQ', 'Japenese', 'American', 'Seafood']
+  CUISINE = ['Fine Dining', 'American', 'Seafood']
 
-  NEIGHBORHOOD = ['Allston/Brighton', 'Back Bay/Bay State Road',
-                  'Beacon Hill/Bay Village', 'Charlestown', 'Chinatown',
-                  'Dorchester/Mattapan', 'East Boston', 'Fenway/Kenmore',
-                  'Hyde Park', 'Jamaica Plain', 'Mission Hill', 'North End',
-                  'Roxbury', 'South Boston', 'South End/St. Botolph',
-                  'West Roxbury/Roslindale']
+  NEIGHBORHOOD = ['Jamaica Plain','Cambridge']
   belongs_to :user
   belongs_to :restaurant
 

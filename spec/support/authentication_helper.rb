@@ -20,7 +20,6 @@ module AuthenticationHelper
     visit new_restaurant_path
     fill_in 'Name', with: restaurant.name
     fill_in 'Address', with: restaurant.address
-    fill_in 'Description', with: restaurant.description
     select restaurant.neighborhood, from: 'Neighborhood'
     select restaurant.price_anchor, from: 'Price'
     select restaurant.cuisine, from: 'Cuisine'

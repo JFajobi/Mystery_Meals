@@ -6,7 +6,6 @@ describe 'adding a new restaurant' do
     pre_count = Restaurant.count
     fill_in 'Address', with: '1415 horizon ct'
     fill_in 'Name', with: 'Mikes Dog Shack'
-    fill_in 'Description', with: 'the best place you are ever gonna eat'
     select 'Back Bay', from: 'Neighborhood'
     select 15, from: 'Price'
     select 'Italian', from: 'Cuisine'
