@@ -30,7 +30,7 @@ module AuthenticationHelper
     visit new_meal_offer_search_path
     select price, from: 'Price'
     select 'Jamaica Plain', from:'Neighborhood'
-    select 'Seafood', from: 'Cuisine'
+    select 'American', from: 'Cuisine'
     click_button 'Submit'
   end
 

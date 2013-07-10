@@ -12,6 +12,6 @@ describe Restaurant do
  
   it 'If user inputs a valid value a restaurant is generated' do
     restaurant
-    expect(Restaurant.price_filter(10)).to_not eql(nil)
+    expect(Restaurant.price_filter(10, 'American', 'Jamaica Plain')).to_not eql(nil)
   end
 end

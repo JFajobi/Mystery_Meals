@@ -1,6 +1,6 @@
 class MealOfferSearch < ActiveRecord::Base
   attr_accessible :cuisine, :neighborhood, :price_anchor, :user_id, :restaurant, :selected_meal_id
-  validates_presence_of :price_anchor, :user_id, :restaurant
+  validates_presence_of :price_anchor, :user_id, :restaurant, :neighborhood, :cuisine
 
 
 
