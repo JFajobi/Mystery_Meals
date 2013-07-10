@@ -65,5 +65,45 @@ restaurants.each  do |restaurant|
 end
 
 
-# User/Admin seed data
-# email, first_name, last_name, admin
+seafood = Restaurant.where(cuisine:'Seafood')
+american = Restaurant.where(cuisine:'American')
+fine_dining = Restaurant.where(cuisine:'Fine Dining')
+
+seafood_names = ['Fish Sticks..','Shrimp Creole','Shrimp Gumbo','Pan Fried Shrimp','Stir Fried Shrimp','Shrimp Stew',
+				'Fish Tacos','Grilled Fish Steaks','Baked Salmon Surprise','Coconut Shrimp','Rockin Oysters',
+				'Baked Cod','Fried Tuna Mash','Catfish Po Boy','Seafood Marinara Pasta','Clam Chowda','Moroccan Salmon Cakes',
+				'Lobster Pizza!','pork chops... jk Sauteed Shrimp','Crab Cakes','Tuna Casserold','Honey Ginger Salmon mmmm...',
+				'Maple Glazed Salmon','JAMBALAYA!!','Canned Tuna.. Sorry',"Filet A Fish Sandwich",'Fish and Chips','LOBSTER TAILS',
+				'Spicy Crab Soup','Turtle Soup','Grilled Glazed Salmon','Bacon Stuffed Crab','Grilled Trout','Sushi','Filet o fish',
+				'Salmon Confee','2 day old Sushi']
+
+american_names =	['Hot Dog','Chilli Dog','Cheese Burger','Glazed Doughnut','Doughnut Buger','Chicken Fingers','Cinnabon','Chicken Nuggets & Fries','MYSTERY MEAL',
+					'Chocolate Pudding','Buffalo Chicken Sandwich','Cheeststeak','Steak & Cheese','Cheese & Steak','Block of Cheddar Chese','Bacon Cheese Burger',
+					'Bacon Mac & Cheese','Meat Loaf','One Pound Cheese Burger','Turkey Sandwhich','BLT']
+
+fine_dining_names =	['Fried Do Do Bird','filet mignon lobster tails',"filet mignon",'Ribey Steak','The Background Image','Full rack of ribs','Chicken Fried Steak',
+					'Large Pepperoni Pizza', 'Chicken Fingers', 'Bowl of Mash Potatoe with Diamond Flakes','Chicken Stuffed Steak Stuffed Ribs','Gumbo Shrimp','Fried Chicken',
+					'Gold Plated Ribs'	]
+
+seafood.each do |object|
+	2.times do 
+		MenuItem.find_or_create_by_dish_and_restaurant_id(dish: seafood_names.sample, restaurant_id:object.id)
+	end
+end
+
+american.each do |object|
+	2.times do 
+		MenuItem.find_or_create_by_dish_and_restaurant_id(dish: american_names.sample, restaurant_id:object.id)
+	end
+end
+
+fine_dining.each do |object|
+	2.times do 
+		MenuItem.find_or_create_by_dish_and_restaurant_id(dish: fine_dining_names.sample, restaurant_id:object.id)
+	end
+end
+
+
+
+
+
