@@ -35,7 +35,30 @@ Boston, MA 02130', 'Fine Dining'],['Jamaica Plain', 'Latino Restaurant', 20,'302
 Jamaica Plain, MA 02130', 'Seafood'],['Jamaica Plain', 'El Embajador', 20,'3371 Washington St
 Jamaica Plain, MA 02130', 'Seafood'],['Jamaica Plain', 'Primo Restaurant', 20,'28 Myrtle St
 Boston, MA 02114', 'Fine Dining'],['Jamaica Plain', 'The Real Deal', 20,'736 Centre St
-Jamaica Plain, MA 02130', 'American']]
+Jamaica Plain, MA 02130', 'American'],['Cambridge','The Helmand', 10, '143 1st St
+Cambridge, MA 02142','Fine Dining'],['Cambridge', 'Eastside Bar & Grille', 10, '561 Cambridge St
+Cambridge, MA 02141', 'Fine Dining'],['Cambridge', 'Court House Seafood', 10, '498 Cambridge St
+Cambridge, MA 02141','Seafood'],['Cambridge','The Similans',10,'145 1st St
+Cambridge, MA 02142','Seafood'],["Cambridge",'2nd Street Cafe',10,'89 2nd St
+Cambridge, MA 02141', 'Seafood'],['Cambridge','Aceituna Cafe',10,'605 W Kendall St
+Cambridge, MA 02142','Seafood'],['Cambridge','Dante',10,'40 Edwin H Land Blvd
+Cambridge, MA 02142','American'],['Cambridge','EVOO',10,'350 3rd St In Kendall Sq
+Cambridge, MA 02142','American'],['Cambridge','RJ Gourmet',10,'320 3rd St In Kendall Sq
+Cambridge, MA 02142','American'],['Cambridge','Fuji At Kendall',10,'20 Edwin H Land Blvd
+Cambridge, MA 02142','American'],['Cambridge','Desfina Restaurant',10,'20 Edwin H Land Blvd
+Cambridge, MA 02142','American'],['Cambridge','Courtside', 20, '13 1st St
+Cambridge, MA 02142','Fine Dining'],['Cambridge',"Abigail's Restaurant", 20, '20 1st St
+Cambridge, MA 02142','Fine Dining'],['Cambridge','Curry Thai', 20, '143 1st St
+Cambridge, MA 02142','Fine Dining'],['Cambridge','Za', 20, '350 1st St
+Cambridge, MA 02142','Fine Dining'],['Cambridge','Firebrand Saints', 20, '43 3rd St
+Cambridge, MA 02142','American'],['Cambridge','Bambara Restaurant', 20, '25 Land Blvd
+Cambridge, MA 02142','American'],['Cambridge','The Squeaky Beaker', 20, '143 1st St
+Cambridge, MA 02142','American'],['Cambridge','Arams No 2 Pizza & Subs', 20, '345 Cambridge St
+Cambridge, MA 02142','American'],['Cambridge','Art Bar', 20, '40 Edwin St
+Cambridge, MA 02142','Seafood'],['Cambridge','Olive Cafe', 20, '43 Gore St
+Cambridge, MA 02142','Seafood'],['Cambridge','Kika Tapas', 20, '350 1st St
+Cambridge, MA 02142','Seafood'],['Cambridge','Boca Grande', 20, '143 1st St
+Cambridge, MA 02142','Seafood']]
 
 restaurants.each  do |restaurant|
   Restaurant.find_or_create_by_neighborhood_and_name_and_price_anchor_and_address_and_cuisine(:neighborhood => restaurant[0], :name => restaurant[1], :price_anchor => restaurant[2], :address => restaurant[3], :cuisine => restaurant[4])
