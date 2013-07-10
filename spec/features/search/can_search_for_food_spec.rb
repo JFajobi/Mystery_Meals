@@ -9,9 +9,9 @@ describe 'searching for food' do
     restaurant
     prev_count = MealOfferSearch.count
     visit new_meal_offer_search_path
-    select '15', from: 'Price'
+    select '10', from: 'Price'
     select 'Jamaica Plain', from:'Neighborhood'
-    select 'Italian', from: 'Cuisine'
+    select 'American', from: 'Cuisine'
     click_button 'Submit'
     expect(MealOfferSearch.count).to eql(prev_count + 1)
   end

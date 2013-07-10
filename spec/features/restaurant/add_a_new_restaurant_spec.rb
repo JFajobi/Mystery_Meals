@@ -6,9 +6,9 @@ describe 'adding a new restaurant' do
     pre_count = Restaurant.count
     fill_in 'Address', with: '1415 horizon ct'
     fill_in 'Name', with: 'Mikes Dog Shack'
-    select 'Back Bay', from: 'Neighborhood'
-    select 15, from: 'Price'
-    select 'Italian', from: 'Cuisine'
+    select 'Cambridge', from: 'Neighborhood'
+    select 10, from: 'Price'
+    select 'American', from: 'Cuisine'
     click_on 'Submit'    
     expect(Restaurant.count).to eql(pre_count + 1)
   end
