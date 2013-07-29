@@ -62,14 +62,15 @@ ActiveRecord::Schema.define(:version => 20130710204040) do
   end
 
   create_table "restaurants", :force => true do |t|
-    t.text     "address",          :null => false
+    t.text     "address",             :null => false
     t.string   "restaurant_image"
-    t.text     "neighborhood",     :null => false
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "price_anchor",     :null => false
-    t.string   "name",             :null => false
-    t.string   "cuisine",          :null => false
+    t.text     "neighborhood",        :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.integer  "price_anchor",        :null => false
+    t.string   "name",                :null => false
+    t.string   "cuisine",             :null => false
+    t.integer  "restaurant_offer_id"
   end
 
   create_table "reviews", :force => true do |t|
