@@ -22,7 +22,7 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'capybara'
+  # gem 'capybara'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'dotenv-rails'
